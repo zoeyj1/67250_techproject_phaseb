@@ -1,0 +1,228 @@
+* {
+  padding: 5px;
+  margin: 5px;
+  font-family: Spectral, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+#submitMessage {
+  display: none;
+}
+
+body {
+  background: #DEE5ED;
+  color: #333;
+}
+
+.logoSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#logo {
+  width: 350px;
+}
+
+
+.active {
+  color: #6C6C6A;
+  background: #E8CCD8;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #6C6C6A;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 3px solid transparent;
+  border-radius: 12px;
+}
+
+nav a:hover {
+  border-color: #E8CCD8;
+}
+
+.nav_bar {
+   grid-area: nav_bar;
+   display: flex; /* Uses Flexbox for internal layout */
+   justify-content: right;   /* Right aligns the content */
+}
+
+#cta {
+  background: #E8CCD8;
+  color: #a67d8f;
+  border: 2px solid;
+  border-color: #c49cad;
+  border-radius: 20px;
+  padding: 10px 10px;
+  font-weight: 400;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+footer {
+  border-top: 1px solid #6C6C6A;
+  padding: 18px 16px;
+  text-align: center;
+  color: #6C6C6A;
+}
+
+#calendar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-left: 0;
+}
+
+
+.date {
+  color: #c97599; 
+  font-size: 20px; 
+  font-weight: 300;
+}
+
+th {
+  color: #9b446a;
+  background-color: #E8CCD8;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+#calendarTable {
+  width: 120%;
+  table-layout: fixed;
+}
+
+.buyNow {
+  background-color: #f3e0f6;
+  color:#a27cb2;
+  padding: 8px 17px;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+
+#ticketTable tr:nth-child(even) {
+  background-color: #fff0f4;
+}
+
+#ticketTable tr:nth-child(odd), tr {
+  background-color: #FFFFFF;
+}
+
+
+#checkoutForm {
+  display: none;
+  margin: auto;
+  text-align: center;
+  margin-left: 30px;
+}
+
+#copyYear {
+  display: inline;
+}
+
+.container {
+  display: grid; /* Turns this div into a CSS Grid layout */
+  grid-template-areas:   /* Defines the layout structure */
+    'header header'
+    'nav_bar nav_bar'
+    'main main-img'
+    'footer footer';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+   grid-area: header; 
+}
+.nav_bar {
+   grid-area: nav_bar; 
+}
+.main {
+  grid-area: main; 
+}
+.main_img {
+   grid-area: main-img; 
+}
+.footer {
+   grid-area: footer;
+}
+
+#readLess, #longIntro {
+  display: none;
+  cursor: pointer;
+}
+
+#readLess, #readMore {
+  font-style: italic;
+  border-radius: 15px;
+  color: #6C6C6A;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#greeting {
+  color: #c97599;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+
+
+.nav_bar {
+   grid-area: nav_bar;
+   display: flex; /* Uses Flexbox for internal layout */
+   justify-content: right;   /* Right aligns the content */
+   gap: 10px;
+}
+
+.nav_bar .icon {
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+   .nav_bar a:not(.icon) {
+    display: none;
+   }
+
+   .nav_bar .icon {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 40px;
+   }
+
+   .nav_bar.responsive {
+    flex-direction: column;
+    align-items: flex-start;
+   }
+
+   .nav_bar.responsive a:not(.icon) {
+    display: block;
+    width: 100%;
+    text-align: left;
+   }
+
+   .nav_bar.responsive .icon {
+    display: block;
+    align-self: flex-end;
+   }
+} 
+
+.content-card {
+  flex: 1 1 300px;
+}
+
+#map {
+  height: 350px;
+}
+
