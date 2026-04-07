@@ -1,0 +1,384 @@
+* {
+  padding: 5px;
+  margin: 5px;
+  font-family: Spectral, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+#submitMessage {
+  display: none;
+}
+
+body {
+  background: #DEE5ED;
+  color: #333;
+}
+
+#logo {
+  width: 350px;
+  margin-left: auto;
+  margin-right: 70px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+.logoSection {
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-direction: row;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#homeLogoSection {
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-direction: column;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.visitLogoSection {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  margin-right: 0px;
+}
+
+.visitLogoSection #logo {
+  margin-right: 0px;
+}
+
+.active {
+  color: #6C6C6A;
+  background: #E8CCD8;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #6C6C6A;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 3px solid transparent;
+  border-radius: 12px;
+}
+
+nav a:hover {
+  border-color: #E8CCD8;
+}
+
+.nav_bar {
+   grid-area: nav_bar;
+   display: flex; /* Uses Flexbox for internal layout */
+   justify-content: right;   /* Right aligns the content */
+}
+
+#cta {
+  background: #E8CCD8;
+  color: #a67d8f;
+  border: 2px solid;
+  border-color: #c49cad;
+  border-radius: 20px;
+  padding: 14px 14px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.2em;
+  text-decoration: none;
+  width: 170px;
+  margin-right: 70px;
+
+}
+
+footer {
+  border-top: 1px solid #6C6C6A;
+  padding: 18px 16px;
+  text-align: center;
+  color: #6C6C6A;
+}
+
+#calendar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-left: 0;
+}
+
+
+.date {
+  color: #c97599; 
+  font-size: 20px; 
+  font-weight: 300;
+}
+
+th {
+  color: #9b446a;
+  background-color: #E8CCD8;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+#calendarTable {
+  width: 120%;
+  table-layout: fixed;
+}
+
+.buyNow {
+  background-color: #f3e0f6;
+  color:#a27cb2;
+  padding: 8px 17px;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+
+#ticketTable tr:nth-child(even) {
+  background-color: #fff0f4;
+}
+
+#ticketTable tr:nth-child(odd), tr {
+  background-color: #FFFFFF;
+}
+
+
+#checkoutForm {
+  display: none;
+  margin: auto;
+  text-align: center;
+  margin-left: 30px;
+}
+
+#copyYear {
+  display: inline;
+}
+
+.container {
+  display: grid; /* Turns this div into a CSS Grid layout */
+  grid-template-areas:   /* Defines the layout structure */
+    'header header'
+    'nav_bar nav_bar'
+    'main main-img'
+    'footer footer';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+   grid-area: header; 
+}
+.nav_bar {
+   grid-area: nav_bar; 
+}
+.main {
+  grid-area: main; 
+}
+.main_img {
+   grid-area: main-img; 
+}
+.footer {
+   grid-area: footer;
+}
+
+#readLess, #longIntro {
+  display: none;
+  cursor: pointer;
+}
+
+#readLess, #readMore {
+  font-style: italic;
+  border-radius: 15px;
+  color: #6C6C6A;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#greeting {
+  color: #c97599;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+
+
+.nav_bar {
+   grid-area: nav_bar;
+   display: flex; /* Uses Flexbox for internal layout */
+   justify-content: right;   /* Right aligns the content */
+   gap: 10px;
+}
+
+.nav_bar .icon {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 650px) {
+    .nav_bar a:not(.icon) {
+      display: none;
+    }
+
+    .nav_bar .icon {
+      display: block;
+      margin-left: auto;
+      cursor: pointer;
+      font-size: 40px;
+    }
+}
+
+
+.nav_bar.responsive {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nav_bar.responsive a:not(.icon) {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.nav_bar.responsive .icon {
+  display: block;
+  align-self: flex-end;
+}
+
+.content-card {
+  flex: 1 1 300px;
+}
+
+#map {
+  height: 550px;
+  margin: 100px;
+  margin-top: 0px;
+}
+
+
+.mySlides { 
+  display: none; 
+}
+
+.slideshow-container { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;  
+}
+
+.images {
+  padding: 0;
+  border: 20px solid #cd9fb3; 
+  border-radius: 20px;  
+  margin-bottom: 0px;  
+  height: 300px;
+  width: 500px;
+}
+
+.prev, .next { 
+  cursor: pointer; 
+  position: relative; 
+  padding: 20px; 
+  font-size: 30px;
+  color: #cd9fb3; 
+}
+
+.next { 
+  right: 0; 
+}
+
+.exhibition {
+  background-color: #E8CCD8;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 25px;
+  margin-right: 25px;
+  width: 370px;
+  padding: 10px;
+}
+
+#exhibition-container {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title {
+  font-style: italic; 
+  font-size: 35px; 
+  text-align: center;
+}
+
+.exhibition-title {
+  font-style: italic; 
+  font-size: 24px;
+}
+
+#hoursTable {
+  width: 400px;
+  text-align: center;
+  display: auto;
+  margin-right: 40px;
+}
+
+#video {
+  display: block;
+  margin: 0 auto;
+}
+
+.price {
+  display: inline;
+}
+
+#price-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  flex: 0 0 auto;
+  margin-top: 0px;
+}
+
+#price {
+  margin-top: 0px;
+  font-size: 30px;
+  color: #c97599;
+}
+
+
+.text {
+  text-align: center;
+  font-size: 22px;
+}
+
+.confirmLogoSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px;
+}
+
+#confirmText {
+  display: flex;
+  flex-direction: column;
+  margin-left: 300px;
+  margin-right: 0px;
+  margin-top: 60px;
+}
